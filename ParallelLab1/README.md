@@ -90,7 +90,7 @@ double Scalar(const Vector* first, const Vector* second) {
 Тестировалась программа на персональном компьютере со следующими
 характеристиками:
 
-* Процессор: Ryzen 5 1600 AF (3.2 Гц, 6 ядер, 12 потоков);
+* Процессор: Ryzen 5 1600 AF (3.6 Гц, 6 ядер, 12 потоков);
 * Видеокарта: GIGABYTE AMD Radeon RX 570 4G AORUS;
 * Материнская плата: MSI B450M-A Pro Max;
 * Оперативная память: Exceleram 2x8 Гб DDR4 2933 Гц CL19;
