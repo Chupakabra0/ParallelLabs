@@ -85,7 +85,7 @@ double Scalar(const Vector* first, const Vector* second) {
 второго векторов, а также требуемое количество потоков, которое нужно
 использовать для выполнения программы.
 
-<img src="#" alt="Тут будет скрин из консоли"/>
+<img src="img/ConsoleScreen.png" alt="Тут будет скрин из консоли"/>
 
 Тестировалась программа на персональном компьютере со следующими
 характеристиками:
@@ -98,7 +98,7 @@ double Scalar(const Vector* first, const Vector* second) {
   * Western Digital Green SSD 240GB M.2 2280 SATA III 3D NAND TLC;
   * Samsung 860 Evo-Series SSD 500GB 2.5" SATA III V-NAND 3bit MLC.
   
-<img src="#" alt="Тут будет диаграмма"/>
+<img src="img/Chart.png" alt="Тут будет диаграмма"/>
 
 Существенное ускорение, очевидно, достигается при использовании всех
 "физических потоков" (1 поток на 1 ядро). Незначительный прирост
