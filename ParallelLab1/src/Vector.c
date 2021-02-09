@@ -4,7 +4,7 @@
 
 #define VECTOR_PRINT_ROW 16ll
 
-// Holy shit, I hate this thing, really, this stupid piece of FUCKING DYKE
+// I hate this thing, really
 static long long i = 0ll;
 
 Vector* AllocateRandomVector(const double max) {
