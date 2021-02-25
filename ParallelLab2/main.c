@@ -15,5 +15,6 @@ int main(int argc, char** argv) {
 
 	free(commRank);
 	free(commSize);
+
 	return EXIT_SUCCESS;
 }

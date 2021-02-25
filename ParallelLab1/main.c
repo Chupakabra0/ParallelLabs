@@ -12,8 +12,6 @@
 
 #define RADIX 10
 
-#define GET_VAR_NAME(var) #var
-
 int main(const int argc, const char** argv) {
 
 	if (argc <= 3) {
@@ -37,7 +35,7 @@ int main(const int argc, const char** argv) {
 	double scalar = 0.0;
 	const double time = CountTime(Scalar, vector1, vector2, &scalar);
 
-	fprintf(stdout, "Result: %f\nSizeof vectors: %llu\nSpent time: %f seconds\nCount of threads: %i\n",
+	fprintf(stdout, "Result: %f\nSizeof vectors: %zu\nSpent time: %f seconds\nCount of threads: %i\n",
 			scalar, sizeof(Vector) + sizeof(Vector), time, threads);
 
 	FreeVector(vector1);
