@@ -3,8 +3,8 @@
 #include <stdlib.h>
 #include <time.h>
 
-#include <Vector.h>
-#include <Utils.h>
+#include "Vector.h"
+#include "Utils.h"
 
 #define FIRST_RAND_MAX_INDEX 1
 #define SECOND_RAND_MAX_INDEX 2
