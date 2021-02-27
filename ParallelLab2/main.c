@@ -15,6 +15,7 @@ int main(int argc, char** argv) {
 
 	free(commRank);
 	free(commSize);
+	MPI_Finalize();
 
 	return EXIT_SUCCESS;
 }
