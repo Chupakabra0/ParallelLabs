@@ -7,7 +7,7 @@
 // I hate this thing, really
 static long long i = 0ll;
 
-Vector* AllocateRandomVector(const double max) {
+Vector* AllocateRandomVector(double max) {
 	Vector* vector = (Vector*)malloc(sizeof(Vector));
 	if (NULL != vector) {
 		#pragma omp parallel for default(none) shared(vector, max) private(i)

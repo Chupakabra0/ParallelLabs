@@ -1,9 +1,12 @@
 #include "Bonus.h"
 
+#include <string.h>
+#include <stdlib.h>
+
 #if defined _WIN64
 	#include <windows.h>
-#elif
-	include <time.h>
+#else
+	#include <time.h>
 #endif
 
 const char* someStr = "According to all known laws of aviation, there is no way a bee should be able to fly. "
@@ -35,10 +38,11 @@ void SleepMs(int milliseconds) {
 	#if defined _WIN64
 		Sleep(milliseconds);
 	#elif _POSIX_C_SOURCE >= 199309L
-		struct timespec ts;
-		ts.tv_sec = milliseconds / 1000;
-		ts.tv_nsec = (milliseconds % 1000) * 1000000;
-		nanosleep(&ts, NULL);
+		struct timespec* ts = malloc(sizeof ts);
+		ts->tv_sec = milliseconds / 1000;
+		ts->tv_nsec = (milliseconds % 1000) * 1000000;
+		nanosleep(ts, NULL);
+		free(ts);
 	#else
 		usleep(milliseconds * 1000);
 	#endif
