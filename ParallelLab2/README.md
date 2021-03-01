@@ -101,4 +101,4 @@ int main(int argc, char** argv) {
 [mpi-windows-check]: img/mpi-windows-check.png
 [mpi-linux-check]: img/mpi-linux-check.png
 [windows-launch]: img/windows-test.png
-[linux-launch]: img/
+[linux-launch]: img/linux-test.png
