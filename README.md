@@ -1,7 +1,5 @@
 # ParallelLabs
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/065afdb2f3ea44bf8750933fe414c954)][codacy-badge]
-
 * Лабораторная работа №1. Использование OpenMP:
   [СсылОЧКА](https://github.com/Chupakabra0/ParallelLabs/tree/main/ParallelLab1)  
 * Лабораторная работа №2. Использование OpenMP: [Тыць](#)  
