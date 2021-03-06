@@ -5,7 +5,11 @@
 #include "mpi.h"
 
 int main(int argc, char** argv) {
-	MPI_Init(&argc, &argv);
+	if (MPI_Init(&argc, &argv) != 0) {
+		fprintf(stderr, "Failed to init MPI");
+
+		return EXIT_FAILURE;
+	}
 
 	int* commRank = (int*)malloc(sizeof(int));
 	int* commSize = (int*)malloc(sizeof(int));
