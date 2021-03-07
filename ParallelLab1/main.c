@@ -3,16 +3,14 @@
 #include <stdlib.h>
 #include <time.h>
 
-#include <Vector.h>
-#include <Utils.h>
+#include "Vector.h"
+#include "Utils.h"
 
 #define FIRST_RAND_MAX_INDEX 1
 #define SECOND_RAND_MAX_INDEX 2
 #define THREADS_COUNT_INDEX 3
 
 #define RADIX 10
-
-#define GET_VAR_NAME(var) #var
 
 int main(const int argc, const char** argv) {
 
@@ -21,7 +19,7 @@ int main(const int argc, const char** argv) {
 		return EXIT_SUCCESS;
 	}
 
-	srand((unsigned)time(NULL)); // NOLINT(cert-msc51-cpp)
+	srand((unsigned)time(NULL));
 
 	const int threads = (int)strtol(argv[THREADS_COUNT_INDEX], NULL, RADIX);
 
@@ -31,13 +29,10 @@ int main(const int argc, const char** argv) {
 	Vector* vector1   = AllocateRandomVector(strtod(argv[FIRST_RAND_MAX_INDEX], NULL));
 	Vector* vector2   = AllocateRandomVector(strtod(argv[SECOND_RAND_MAX_INDEX], NULL));
 
-//	PrintVector(stdout, vector1, GET_VAR_NAME(vector1));
-//	PrintVector(stdout, vector2, GET_VAR_NAME(vector2));
-
 	double scalar = 0.0;
 	const double time = CountTime(Scalar, vector1, vector2, &scalar);
 
-	fprintf(stdout, "Result: %f\nSizeof vectors: %llu\nSpent time: %f seconds\nCount of threads: %i\n",
+	fprintf(stdout, "Result: %f\nSizeof vectors: %zu\nSpent time: %f seconds\nCount of threads: %i\n",
 			scalar, sizeof(Vector) + sizeof(Vector), time, threads);
 
 	FreeVector(vector1);
