@@ -19,7 +19,7 @@ int main(const int argc, const char** argv) {
 		return EXIT_SUCCESS;
 	}
 
-	srand((unsigned)time(NULL)); // NOLINT(cert-msc51-cpp)
+	srand((unsigned)time(NULL));
 
 	const int threads = (int)strtol(argv[THREADS_COUNT_INDEX], NULL, RADIX);
 
@@ -28,9 +28,6 @@ int main(const int argc, const char** argv) {
 
 	Vector* vector1   = AllocateRandomVector(strtod(argv[FIRST_RAND_MAX_INDEX], NULL));
 	Vector* vector2   = AllocateRandomVector(strtod(argv[SECOND_RAND_MAX_INDEX], NULL));
-
-//	PrintVector(stdout, vector1, GET_VAR_NAME(vector1));
-//	PrintVector(stdout, vector2, GET_VAR_NAME(vector2));
 
 	double scalar = 0.0;
 	const double time = CountTime(Scalar, vector1, vector2, &scalar);
