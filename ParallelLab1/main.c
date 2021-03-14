@@ -15,7 +15,7 @@
 int main(const int argc, const char** argv) {
 
 	if (argc <= 3) {
-		fprintf(stdout, "No args to launch the program...\nExample: lab1.exe 1.1 0.5 1");
+		fprintf(stdout, "No args to launch the program...\nExample: ParallelLab1.exe 1.1 0.5 1");
 		return EXIT_SUCCESS;
 	}
 

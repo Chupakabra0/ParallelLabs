@@ -5,6 +5,6 @@ find_package(MPI REQUIRED)
 
 include_directories(include ${MPI_INCLUDE_PATH})
 
-add_executable(ParallelLab3 main.c)
+add_executable(ParallelLab3 main.c src/Helpers.c src/ReadFile.c src/ProcessInfo.c include/ProcessInfo.h)
 
 target_link_libraries(ParallelLab3 PRIVATE ${MPI_C_LIBRARIES})
