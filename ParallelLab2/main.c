@@ -7,8 +7,7 @@
 int main(int argc, char** argv) {
 	if (MPI_Init(&argc, &argv) != 0) {
 		fprintf(stderr, "Failed to init MPI");
-
-		return EXIT_FAILURE;
+		MPI_Abort(MPI_COMM_WORLD, EXIT_FAILURE);
 	}
 
 	int* commRank = (int*)malloc(sizeof(int));
