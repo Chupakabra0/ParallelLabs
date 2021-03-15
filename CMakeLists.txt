@@ -6,3 +6,4 @@ set(CMAKE_C_STANDARD 11)
 
 add_subdirectory(ParallelLab1)
 add_subdirectory(ParallelLab2)
+add_subdirectory(ParallelLab3)
