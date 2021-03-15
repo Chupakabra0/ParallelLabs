@@ -18,7 +18,7 @@ int main(int argc, char** argv) {
 		int* rank = malloc(sizeof(int));
 
 		if ((error = GetCommutatorRank(MPI_COMM_WORLD, rank)) == NO_ERROR && *rank == 0) {
-			fprintf(stdout, "%s\n%s\n", "Not enough args...", "Example: ParallelLab3.exe file.txt");
+			fprintf(stdout, "%s\n%s\n", "Not enough args...", "Example: ParallelLabN.exe file.txt");
 		}
 
 		free(rank);
