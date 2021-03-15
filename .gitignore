@@ -332,7 +332,7 @@ ASALocalRun/
 # Build dirs
 cmake-build-debug-visual-studio/
 cmake-build-release-visual-studio/
-cmake-build-debug-mingw-64/
-cmake-build-release-mingw-64/
-cmake-build-debug-mingw-32/
-cmake-build-release-mingw-32/
+cmake-build-debug-mingw-w64/
+cmake-build-release-mingw-w64/
+cmake-build-debug-mingw-w32/
+cmake-build-release-mingw-w32/
