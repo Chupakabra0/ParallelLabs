@@ -21,7 +21,7 @@ int main(int argc, char** argv) {
 
 		if (argc < 2) {
 			*rank == 0 ?
-				fprintf(stdout, "%s\n%s", "Not enough args to launch the program", "Example: ParallelLab3 100") : 0;
+				fprintf(stdout, "%s\n%s\n", "Not enough args to launch the program", "Example: ParallelLab3 100") : 0;
 
 			return FinalizeMPI();
 		}

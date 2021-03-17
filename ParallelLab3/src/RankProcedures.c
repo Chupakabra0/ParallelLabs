@@ -23,6 +23,7 @@
 	double* sum = (double*)malloc(sizeof(double));
 	MPI_Recv(sum, 1, MPI_DOUBLE, GET_FROM_FIRST_PROCESS, SECOND_TASK, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
 	fprintf(stdout, "0 process got value: sum = %lf", *sum);
+	fprintf(stdout, "\n");
 	fflush(stdout);
 
 	free(sum);
@@ -34,6 +35,7 @@ void FirstRankProcedure(int size) {
 	MPI_Recv(array, size, MPI_DOUBLE, GET_FROM_ZERO_PROCESS, FIRST_TASK, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
 	fprintf(stdout, "1 process got value: array = ");
 	PrintArray(stdout, array, array + size);
+	fprintf(stdout, "\n");
 	fflush(stdout);
 
 	double* sum = (double*)malloc(sizeof(double));
