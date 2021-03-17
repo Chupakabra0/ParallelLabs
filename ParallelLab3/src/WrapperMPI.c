@@ -1,6 +1,6 @@
 #include "WrapperMPI.h"
 
-int InitMPI(const int* argc, char*** argv) {
+int InitMPI(int* argc, char*** argv) {
 	return MPI_Init(argc, argv);
 }
 
