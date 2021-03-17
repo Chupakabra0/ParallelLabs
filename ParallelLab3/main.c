@@ -5,7 +5,7 @@
 #include "WrapperMPI.h"
 #include "RankProcedures.h"
 
-int main(const int argc, char** argv) {
+int main(int argc, char** argv) {
 	if (InitMPI(&argc, &argv)) {
 		fprintf(stderr, "Error: %s!\n", "failed to init MPI");
 		MPI_Abort(MPI_COMM_WORLD, EXIT_FAILURE);
