@@ -25,5 +25,4 @@ void PrintArray(FILE* file, double* begin, const double* end) {
 	for (double* i = begin; i < end; ++i) {
 		fprintf(file, " %lf", *i);
 	}
-	fprintf(file, "\n");
 }
