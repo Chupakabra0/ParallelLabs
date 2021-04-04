@@ -330,7 +330,9 @@ ASALocalRun/
 .mfractor/
 
 # Build dirs
-cmake-build-debug-msvc/
-cmake-build-release-msvc/
-cmake-build-debug-mingw/
-cmake-build-release-mingw/
+cmake-build-debug-visual-studio/
+cmake-build-release-visual-studio/
+cmake-build-debug-mingw-w64/
+cmake-build-release-mingw-w64/
+cmake-build-debug-mingw-w32/
+cmake-build-release-mingw-w32/
