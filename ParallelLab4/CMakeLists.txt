@@ -5,6 +5,6 @@ find_package(MPI REQUIRED)
 
 include_directories(include ${MPI_INCLUDE_PATH})
 
-add_executable(ParallelLab2 main.c src/Bonus.c)
+add_executable(ParallelLab4 main.c src/WrapperMPI.c src/Matrix.c)
 
-target_link_libraries(ParallelLab2 PRIVATE ${MPI_C_LIBRARIES})
+target_link_libraries(ParallelLab4 PRIVATE ${MPI_C_LIBRARIES})
