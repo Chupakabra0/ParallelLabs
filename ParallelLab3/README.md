@@ -87,8 +87,8 @@ void FirstRankProcedure(int size) {
 
 Примеры работы приложения на Windows 10 и Linux (Zorin OS):
 
-[][windows-example]
-[][linux-example]
+![TODO WINDOWS][windows-example]
+![][linux-example]
 
-[windows-example]: img/linux-example.png
+[windows-example]: img/windows-example.png
 [linux-example]: img/linux-example.png
