@@ -13,22 +13,26 @@ int main(int argc, char** argv) {
 
 	srand((unsigned)time(NULL));
 
-	Matrix* first  = AllocateSquareMatrix(3);
-	Matrix* second = AllocateSquareMatrix(3);
+	Matrix* first  = AllocateSquareMatrix(4u);
+	Matrix* second = AllocateSquareMatrix(4u);
 	FillRandMatrix(first, -5.0, 5.0);
 	FillRandMatrix(second, -5.0, 5.0);
 
-	Matrix* third = ProductMatrix(first, second);
-
+	Matrix* third  = ProductMatrix(first, second);
+	Matrix* fourth = TransposeMatrix(third);
 	PrintMatrix(stdout, first);
-	fprintf(stdout, "------------\n");
+	fprintf(stdout, "------------------------------\n");
 
 	PrintMatrix(stdout, second);
-	fprintf(stdout, "------------\n");
+	fprintf(stdout, "------------------------------\n");
 
 	PrintMatrix(stdout, third);
-	fprintf(stdout, "------------\n");
+	fprintf(stdout, "------------------------------\n");
 
+	PrintMatrix(stdout, fourth);
+	fprintf(stdout, "------------------------------\n");
+
+	FreeMatrix(fourth);
 	FreeMatrix(third);
 	FreeMatrix(second);
 	FreeMatrix(first);

@@ -16,6 +16,7 @@ void PrintMatrix(FILE* file, const Matrix* matrix);
 void FillZeroMatrix(Matrix* matrix);
 void FillRandMatrix(Matrix* matrix, double min, double max);
 Matrix* ProductMatrix(const Matrix* first, const Matrix* second);
+Matrix* TransposeMatrix(const Matrix* matrix);
 
 static Matrix* AllocateSquareMatrix(const unsigned rowsAndColumnsCount) {
 	return AllocateMatrix(rowsAndColumnsCount, rowsAndColumnsCount);
