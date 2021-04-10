@@ -17,7 +17,7 @@ int main(int argc, char** argv) {
 
 	if (argc < 2) {
 		*processRank == 0 ?
-			fprintf(stdout, "%s\n%s\n", "Not enough args to launch the program", "Example: ParallelLab4") :
+			fprintf(stdout, "%s\n%s\n", "Not enough args to launch the program", "Example: ParallelLab4 n\nWhere n - count of rows per process") :
 			0;
 	}
 	else {
@@ -26,24 +26,27 @@ int main(int argc, char** argv) {
 		int* processSize = malloc(sizeof(int));
 		GetSizeMPI(processSize);
 
-		// TODO: helper function with input checks
-		const unsigned k = (unsigned)strtoul(argv[1], NULL, 10);
+		if (*processSize > 1) {
 
-		Matrix* first = AllocateSquareMatrix(k * (*processSize - 1u));
-		Matrix* second = AllocateSquareMatrix(k * (*processSize - 1u));
-		FillRandMatrix(first, -5.0, 5.0);
-		FillRandMatrix(second, -5.0, 5.0);
+			const unsigned k = (unsigned)strtoul(argv[1], NULL, 10);
 
-		ProductProcedure(first, second, *processSize, *processRank);
+			Matrix* first = AllocateMatrix(1, k * (*processSize - 1u));
+			Matrix* second = AllocateSquareMatrix(k * (*processSize - 1u));
+			FillRandMatrix(first, -5.0, 5.0);
+			FillRandMatrix(second, -5.0, 5.0);
 
-//		PrintMatrix(stdout, first);
-//		fprintf(stdout, "------------------------------\n");
-//
-//		PrintMatrix(stdout, second);
-//		fprintf(stdout, "------------------------------\n");
+			double start = MPI_Wtime();
+			ProductProcedure(first, second, *processSize, *processRank);
+			double end = MPI_Wtime();
 
-		FreeMatrix(second);
-		FreeMatrix(first);
+			*processRank == 0 ? fprintf(stdout, "Total time is %f\n", end - start) : 0;
+
+			FreeMatrix(second);
+			FreeMatrix(first);
+		}
+		else {
+			fprintf(stdout, "Not enough processes to launch the program. Need at least 2.\n");
+		}
 
 		free(processSize);
 	}

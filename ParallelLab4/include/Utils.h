@@ -2,6 +2,8 @@
 
 #include <stdlib.h>
 
+#include "Matrix.h"
+
 static double RandDouble(double min, double max);
 
 static double RandDouble(const double min, const double max) {
