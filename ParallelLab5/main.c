@@ -26,7 +26,7 @@ void PrintArray(FILE* file, double* begin, const double* end) {
     }
     fprintf(file, "%lf", *(begin++));
     for (double* i = begin; i < end; ++i) {
-        fprintf(file, " %lf", *i);
+        fprintf(file, ", %lf", *i);
     }
 }
 
@@ -44,8 +44,8 @@ int main(int argc, char* argv[]) {
 	MPI_Comm_rank(MPI_COMM_WORLD, &rank);
 	MPI_Comm_size(MPI_COMM_WORLD, &size);
 
-	double* array       = AllocateRandomArray(size, 3.0);
-	double* resultArray = AllocateRandomArray(size, 3.0);
+	double* array           = AllocateRandomArray(size, 3.0);
+	double* resultArray     = AllocateRandomArray(size, 3.0);
 	double  resultSum       = 0.0;
     double  resultProd      = 1.0;
     double  resultMin       = -DBL_MAX;
